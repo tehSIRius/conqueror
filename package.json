@@ -4,9 +4,11 @@
   "description": "Conqueror is a love letter to Dobyvatel that used to be. A game that was smothered in it's sleep.",
   "main": "index.js",
   "scripts": {
-    "start-server": "node server.js",
+    "dev": "concurrently \"npm run start-back\" \"cd ./frontend && npm run dev\"",
+    "start-back": "nodemon backend/server.js",
     "start-front": "cd ./frontend && npm run start",
-    "start": "concurrently \"npm run start-server\" \"npm run start-front\"",
+    "post-start-front": "cd ..",
+    "start": "concurrently \"npm run start-back\" \"npm run start-front\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,8 +31,16 @@
   },
   "homepage": "https://github.com/tehSIRius/conqueror#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "concurrently": "^5.1.0",
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "http": "0.0.1-security",
+    "knex": "^0.21.0",
+    "nodemon": "^2.0.3",
+    "socketio": "^1.0.0",
+    "sqlite3": "^4.1.1"
   },
   "proxy": "http://localhost:5000"
 }
