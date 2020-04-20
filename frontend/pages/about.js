@@ -1,18 +1,18 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-class Index extends React.Component {
+class About extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        return (
+        return(
             <Layout>
-                <h1>I am Conqueror.</h1>
+                <h1>This is about page</h1>
             </Layout>
         );
     }
 }
 
-export default Index;
+export default About;
