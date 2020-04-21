@@ -2,7 +2,7 @@
   "name": "conqueror",
   "version": "1.0.0",
   "description": "Conqueror is a love letter to Dobyvatel that used to be. A game that was smothered in it's sleep.",
-  "main": "index.js",
+  "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node src/server/index.js",
